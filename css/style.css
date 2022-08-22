@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background-color: hsl(210, 46%, 95%);
+    font-size: 13px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+.container{
+    max-width: 950px;
+    margin: 5% auto;
+    display: grid;
+    grid-template-areas: "a a b e" "c d d e";
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-items: stretch;
+}
+.box1{
+    grid-area: a;
+    background-image: url("../images/bg-pattern-quotation.svg");
+    background-repeat: no-repeat;
+    background-position: 300px 0;
+    background-color: hsl(263, 55%, 52%);
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+}
+.testimony{
+    padding-bottom: 20px;
+    font-size: 1.2rem;
+}
+.review{
+    opacity: 0.7;
+}
+.headerb span{
+    opacity: 0.5;
+}
+.box2{
+    grid-area: b;
+    background-color: hsl(217, 19%, 35%);
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+}
+.box3{
+    grid-area: c;
+    padding: 20px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 5px 10px 20px hsl(0, 0%, 81%);
+}
+.box4{
+    grid-area: d;
+    background-color: hsl(219, 21%, 14%);
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    
+}
+.box5{
+    grid-area: e;
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 5px 10px 20px hsl(0, 0%, 81%);
+}
+.container1{
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+    gap: 10px;
+}
+.headera img{
+    width: 30px;
+    border-radius: 50%;
+}
+.headera{
+    width: 30px;
+}
+.attribution{
+    text-align: center;
+}
+@media screen and (max-width:600px) {
+    .container{
+        max-width: 300px;
+        grid-template-rows: max-content;
+        grid-template-columns: 1fr;
+        grid-template-areas: "a" "b" "c" "d" "e";
+    }
+    .box1, .box2, .box3, .box4, .box5{
+        padding: 20px;
+    }
+    .box1{
+        background-position: 150px 0;
+    }
+    
+}
+@media screen and (min-width:768px) and (max-width:900px){
+    .container{
+        max-width: 600px;
+        grid-template-rows: max-content;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "a b" "c d" "e e";
+
+    }
+}
+@media screen and(min-width:1200px){
+    .container{
+        max-width: 1100px;
+    }
+}
