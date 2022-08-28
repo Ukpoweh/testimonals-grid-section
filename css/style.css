@@ -4,14 +4,17 @@
     box-sizing: border-box;
 }
 body{
-    height: 100vh;
+    min-height: 100vh;
     background-color: hsl(210, 46%, 95%);
     font-size: 13px;
     font-family: 'Barlow Semi Condensed', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .container{
     max-width: 950px;
-    margin: 5% auto;
+    margin: 5rem auto;
     display: grid;
     grid-template-areas: "a a b e" "c d d e";
     grid-template-rows: repeat(2, 1fr);
